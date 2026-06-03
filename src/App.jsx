@@ -1,6 +1,6 @@
 
-import { HashRouter } from "react-router-dom";
-//import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import Header from "./components/Header";
@@ -16,7 +16,7 @@ export default function App() {
   const [isLogin, setIsLogin] = useState(false);
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       {/* Header */}
       <Header isLogin={isLogin} setIsLogin={setIsLogin} />
 
@@ -35,6 +35,6 @@ export default function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/manage" element={<Manage />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
